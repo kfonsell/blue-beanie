@@ -1,5 +1,6 @@
 "use strict";
 
+/* Start physics system and load 'loadState'. */
 class bootState
 {
     create()
