@@ -10,8 +10,13 @@
 
 ## Running the tests
 
+## Assets Authors
 
-## Authors
+* Main player sprite by Curt - cjc83486 https://opengameart.org/content/rpg-character
+
+
+
+## Project Authors
 
 * [faraco](https://github.com/faraco) <skelic3@gmail.com>
         

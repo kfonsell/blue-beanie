@@ -6,14 +6,15 @@ class loadState
     preload()
     {
         let loading_label = game.add.text(
-                80,
                 150,
-                'loading...',
+                150,
+                'loading game...',
                 {font: '30px Courier', fill: '#ffffff'}
         );
 
-        game.load.image('player', 'assets/graphics/sprites/player.png');
+        game.load.spritesheet('player', 'assets/graphics/sprites/MainGuySpriteSheet.png', 41, 36, 12);
         game.load.image('beanie', 'assets/graphics/miscs/beanie.png');
+
     }
 
     create()

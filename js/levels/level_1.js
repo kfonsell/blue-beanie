@@ -1,6 +1,6 @@
 "use strict";
 
-/* Game logic */
+/* Game logic for level 1 */
 class level_1_State
 {
     create()
