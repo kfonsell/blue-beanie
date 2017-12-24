@@ -1,0 +1,10 @@
+Goal: Reveal the mystery and find all blue beanies!
+
+Has 7 levels.
+
+Beanie stored in a chest.
+
+2 to 3 enemies per map/level.
+
+After collected one beanie for the level, he/she can go to next level through a door (load new level game state).
+
