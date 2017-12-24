@@ -13,7 +13,7 @@ class loadState
         );
 
         game.load.image('player', 'assets/graphics/sprites/player.png');
-        game.load.image('win', 'assets/graphics/miscs/win.png');
+        game.load.image('beanie', 'assets/graphics/miscs/beanie.png');
     }
 
     create()

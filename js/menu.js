@@ -6,8 +6,8 @@ class menuState
     create()
     {
         let name_label = game.add.text(
-                80,
-                80,
+                game.height / 2,
+                game.width / 2,
                 'Blue Beanie',
                 {font: '50px Arial', fill: '#ffffff'}
         );
@@ -25,6 +25,6 @@ class menuState
 
     start()
     {
-        game.state.start('play');
+        game.state.start('level_1');
     }
 }
