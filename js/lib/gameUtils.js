@@ -15,6 +15,8 @@ class gameUtils
         this.player.animations.add('up', [6, 7, 8], 10, true);
         this.player.animations.add('down', [0, 1, 2], 10, true);
         this.player.animations.add('still', [1], null, true);
+
+        game.camera.follow(this.player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
     }
 
     /**
