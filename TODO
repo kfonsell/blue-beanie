@@ -14,5 +14,18 @@ Levels Descriptions
 
 > Player can proceed to next level by going to 'exit' door after they got the beanie for the level.
 
-1. Collect 3 keys and open the door to a room where beanie is located.
+High priorities:
+    * Add enemies (goo monster which is similar to mario's goomba movement?)
+    * Add HUD (collected keys, timelapse (40 seconds min?), current level)
+    * Improving game menu and game over screen.
+    * Add music.
+    * Add fatal obstacles (lava, spikes, etc)
+
+Low priorities:
+    * Decorate outside canvas backgrounds.
+    * Add project links.
+    * Animate objects.
+
+1. Collect 3 keys and open the door to a room where beanie is located and continue to the next leve.
+    - Or collect 3 beanies and go to the exit door.
 
