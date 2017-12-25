@@ -8,7 +8,9 @@ A 2D run-and-collect web video game.
 
 ## Assets Authors
 
-* Main player sprite by Curt - cjc83486 https://opengameart.org/content/rpg-character
+* Main player sprite by [Curt]( https://opengameart.org/content/rpg-character
+)
+* Key sprite by [Kamigeek](https://opengameart.org/users/kamigeek)
 
 ## Project Authors
 
