@@ -16,6 +16,8 @@ class gameUtils
         this.player.animations.add('down', [0, 1, 2], 10, true);
         this.player.animations.add('still', [1], null, true);
 
+        game.physics.arcade.enable(this.player);
+
         game.camera.follow(this.player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
     }
 
