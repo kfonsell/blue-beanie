@@ -15,19 +15,18 @@ class level_1_State
         this.beanie = game.add.sprite(256, 256, 'beanie');
         game.physics.enable(this.beanie, Phaser.Physics.ARCADE);
 
-        /* Camera follow player */
+        /* Camera follow player (TODO smooth follow) */
         game.camera.follow(this.player);
     }
 
     update()
     {
-        game.physics.arcade.overlap(this.player, this.beanie, this.Win, null, this);
+        game.physics.arcade.overlap(this.player, this.beanie, this.win_state, null, this);
 
         this.player_controller.set_main_player_movements();
-
     }
 
-    Win()
+    win_state()
     {
         game.state.start('win');
     }

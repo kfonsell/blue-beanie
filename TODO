@@ -8,3 +8,11 @@ Beanie stored in a chest.
 
 After collected one beanie for the level, he/she can go to next level through a door (load new level game state).
 
+
+Levels Descriptions
+-------------------
+
+> Player can proceed to next level by going to 'exit' door after they got the beanie for the level.
+
+1. Collect 3 keys and open the door to a room where beanie is located.
+

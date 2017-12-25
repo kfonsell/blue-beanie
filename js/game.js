@@ -3,7 +3,7 @@
 /* Initializes game canvas */
 let game = new Phaser.Game(800, 600, Phaser.CANVAS, 'game_canvas');
 
-/* Initializes game states */
+/* Initializes game states and levels */
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);

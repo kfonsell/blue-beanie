@@ -1,6 +1,6 @@
 "use strict";
 
-/* Game over (win) screen */
+/* Game over (win) screen and state */
 class winState
 {
     create()

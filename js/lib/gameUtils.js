@@ -3,6 +3,7 @@
 /* Common and repetitive boilerplates for game levels usage (such as movement keys mapping) */
 class gameUtils
 {
+    /* param: player - A player instance. */
     constructor(player)
     {
         this.keyboard = game.input.keyboard;
@@ -13,10 +14,14 @@ class gameUtils
         this.player.animations.add('right', [3, 4, 5], 10, true);
         this.player.animations.add('up', [6, 7, 8], 10, true);
         this.player.animations.add('down', [0, 1, 2], 10, true);
-        this.player.animations.add('still', [1], 10, true);
-
+        this.player.animations.add('still', [1], null, true);
     }
 
+    /**
+     * Set main player keys mapping for movement (wasd, and arrow keys)
+     * 
+     * @return void
+     * */
     set_main_player_movements()
     {
         if (this.cursors.left.isDown || this.keyboard.isDown(Phaser.Keyboard.A))
