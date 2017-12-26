@@ -9,15 +9,15 @@ Beanie stored in a chest.
 After collected one beanie for the level, he/she can go to next level through a door (load new level game state).
 
 
-Levels Descriptions
+Levels Priorities
 -------------------
 
 > Player can proceed to next level by going to 'exit' door after they got the beanie for the level.
 
 High priorities:
-    * Add enemies (bat monster which is similar to mario's goomba movement?)
-        - Added bat sprites, location and animations.
-        - Implement movement and player-bat overlap event.
+    [DONE] Add enemies (bat monster that follows main player)
+        [DONE] Added bat sprites, location and animations.
+        [DONE] Implement movement and player-bat overlap event.
 
     * Add HUD (collected keys, timelapse (40 seconds min?), current level)
     * Improving game menu and game over screen.
@@ -29,6 +29,9 @@ Low priorities:
     * Add project links.
     * Animate objects.
 
-1. Collect 3 keys and open the door to a room where beanie is located and continue to the next leve.
-    - Or collect 3 beanies and go to the exit door.
+Levels Objectives
+------------------
+1. [DONE] Collect 3 keys, avoid the bats and open the door to proceed to next level.
+2. Collect 4 keys, avoid the bats and lava pool and open the door to proceed to next level.
+
 

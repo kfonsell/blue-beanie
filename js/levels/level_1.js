@@ -5,8 +5,9 @@ class level_1_State
 {
     create()
     {
-        this.map = game.add.tilemap('map');
+        this.map = game.add.tilemap('map_1');
         this.map.addTilesetImage('landscape');
+        this.map.addTilesetImage('door');
         this.map.addTilesetImage('key');
 
         this.layer_0 = this.map.createLayer('background_layer');
@@ -19,9 +20,6 @@ class level_1_State
         this.player = game.add.sprite(game.world.centerX + 30, game.world.centerY, 'player');
 
         this.player_controller = new gameUtils(this.player);
-
-        this.beanie = game.add.sprite(256, 256, 'beanie');
-        game.physics.arcade.enable(this.beanie);
         
         this.keys = game.add.group();
         this.keys.enableBody = true;
@@ -36,17 +34,47 @@ class level_1_State
 
         this.enemies.callAll('animations.add', 'animations', 'fly', [1, 2, 3], 10, true);
         this.enemies.callAll('animations.play', 'animations', 'fly');
+
+        this.door = game.add.group();
+        this.door.enableBody = true;
+
+        /* FIXME Fix corrupted door texture. */
+        this.map.createFromObjects('exit_layer', 1312, 'door', 0, true, false, this.door);
+
+        /*
+         * Enemies children objects.
+        this.bat_1 = this.enemies.children[0];
+        this.bat_2 = this.enemies.children[1];
+        this.bat_3 = this.enemies.children[2];
+        */
     }
 
     update()
     {
+        /* Block player from going outside the map */
         game.physics.arcade.collide(this.player, this.layer_0);
-        game.physics.arcade.overlap(this.player, this.beanie, this.level_2_state, null, this);
+
+        /* Proceed to next level if objectives successfully completed */
+        game.physics.arcade.overlap(this.player, this.door, this.goto_level_2, null, this);
+
         game.physics.arcade.overlap(this.player, this.keys, this.collect_key, null, this);
 
-        /* Stop player from going outside the map through the wall */
+        /* Restart level if player caught by enemies */
+        game.physics.arcade.overlap(this.player, this.enemies, this.restart_level, null, this);
 
         this.player_controller.set_main_player_movements();
+
+
+        /* Make enemies follow players */
+        let player = this.player;
+        this.enemies.forEachAlive(function(enemy)
+        {
+            if (enemy.visible && enemy.inCamera)
+            {
+                game.physics.arcade.moveToObject(enemy, player, enemy.speed);
+            }
+
+        });
     }
 
     /* Collect keys, destroy and count collected keys. */
@@ -54,21 +82,21 @@ class level_1_State
     {
         this.collected_keys += 1;
         key.kill();
-        console.log(this.collected_keys);
+    }
+
+    /* TODO Restart level 1 instead */
+    restart_level()
+    {
+        game.state.start('lose');
     }
     
     /* Proceed to level 2. */
-    level_2_state()
+    goto_level_2()
     {
 
         if (this.collected_keys === 3)
         {
-
-            /* TODO Implement level 2.
-             *
-             * Temporary placeholder for level 2
-             */
-            game.state.start('win');
+            game.state.start('level_2');
         }
     }
 }
