@@ -17,6 +17,7 @@ class loadState
         game.load.image('beanie', 'assets/graphics/miscs/beanie.png');
         game.load.image('landscape', 'assets/graphics/tiles/landscape.png');
         game.load.image('key', 'assets/graphics/tiles/key.png');
+        game.load.spritesheet('bat', 'assets/graphics/tiles/bat-sprite32x32.png', 32, 32, 16);
     }
 
     create()

@@ -15,7 +15,10 @@ Levels Descriptions
 > Player can proceed to next level by going to 'exit' door after they got the beanie for the level.
 
 High priorities:
-    * Add enemies (goo monster which is similar to mario's goomba movement?)
+    * Add enemies (bat monster which is similar to mario's goomba movement?)
+        - Added bat sprites, location and animations.
+        - Implement movement and player-bat overlap event.
+
     * Add HUD (collected keys, timelapse (40 seconds min?), current level)
     * Improving game menu and game over screen.
     * Add music.

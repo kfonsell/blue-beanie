@@ -6,14 +6,12 @@ A 2D run-and-collect web video game.
 
 1. Visit https://faraco.github.io/blue-beanie/index.html to play online.
 
-## Assets Authors
+# Assets Authors
 
-* Main player sprite by [Curt]( https://opengameart.org/content/rpg-character
-)
+* Main player sprite by [Curt]( https://opengameart.org/content/rpg-character)
+* bat sprite by [bazie](https://opengameart.org/users/bagzie)
 * Key sprite by [Kamigeek](https://opengameart.org/users/kamigeek)
-
 * Ground sprite by [gfx0](https://opengameart.org/users/gfx0)
-
 
 ## Project Authors
 

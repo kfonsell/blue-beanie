@@ -26,9 +26,16 @@ class level_1_State
         this.keys = game.add.group();
         this.keys.enableBody = true;
 
-        this.map.createFromObjects('objects_layer', 65, 'key', 0, true, false, this.keys);
-
+        this.map.createFromObjects('collectables_layer', 65, 'key', 0, true, false, this.keys);
         this.collected_keys = 0;
+
+        this.enemies = game.add.group();
+        this.enemies.enableBody = true;
+        
+        this.map.createFromObjects('enemies_layer', 67, 'bat', 1, true, false, this.enemies);
+
+        this.enemies.callAll('animations.add', 'animations', 'fly', [1, 2, 3], 10, true);
+        this.enemies.callAll('animations.play', 'animations', 'fly');
     }
 
     update()
@@ -42,13 +49,15 @@ class level_1_State
         this.player_controller.set_main_player_movements();
     }
 
+    /* Collect keys, destroy and count collected keys. */
     collect_key(player, key)
     {
         this.collected_keys += 1;
         key.kill();
         console.log(this.collected_keys);
     }
-
+    
+    /* Proceed to level 2. */
     level_2_state()
     {
 
