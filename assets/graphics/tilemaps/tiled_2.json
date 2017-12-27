@@ -90,6 +90,66 @@
         {
          "draworder":"topdown",
          "height":30,
+         "name":"enemies_layer",
+         "objects":[
+                {
+                 "gid":76,
+                 "height":32,
+                 "id":5,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":865,
+                 "y":189
+                }, 
+                {
+                 "gid":76,
+                 "height":32,
+                 "id":6,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":733,
+                 "y":643
+                }, 
+                {
+                 "gid":76,
+                 "height":32,
+                 "id":8,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":59,
+                 "y":476
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":30,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "height":30,
          "name":"exit_layer",
          "objects":[],
          "opacity":1,
@@ -99,7 +159,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":5,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "properties":
     {
@@ -155,6 +215,22 @@
          "tilecount":1,
          "tileheight":32,
          "tilewidth":24
+        }, 
+        {
+         "firstgid":75,
+         "image":"..\/tiles\/bat-sprite32x32.png",
+         "imageheight":128,
+         "imagewidth":128,
+         "margin":0,
+         "name":"bat-sprite32x32",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tilecount":16,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "version":1,
