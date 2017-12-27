@@ -25,6 +25,7 @@ class menuState
 
     start()
     {
-        game.state.start('level_1');
+        // temporary level 2 
+        game.state.start('level_2');
     }
 }
