@@ -25,6 +25,7 @@ A 2D run-and-collect web video game.
 * Key sprite by [Kamigeek](https://opengameart.org/users/kamigeek)
 * Ground sprite by [gfx0](https://opengameart.org/users/gfx0)
 * Door sprite by [SpiderDave](https://opengameart.org/users/spiderdave)
+* Lava sprite by [TearOfTheStar](https://opengameart.org/users/tearofthestar)
 
 ## Project Authors
 
