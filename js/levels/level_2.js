@@ -30,16 +30,25 @@ class level_2_State
         this.collected_keys = 0;
     }
 
+    update()
+    {
+        game.physics.arcade.collide(this.player, this.layer_0);
+        game.physics.arcade.overlap(this.player, this.keys, this.collect_key, null, this);
+
+        this.player_controller.set_main_player_movements();
+    }
+
     collect_key(player, key)
     {
         this.collected_keys += 1;
         key.kill();
     }
 
-    update()
+    goto_level_2()
     {
-        game.physics.arcade.collide(this.player, this.layer_0);
-
-        this.player_controller.set_main_player_movements();
+        if (this.collected_keys === 4)
+        {
+            game.state.start('level_1');
+        }
     }
 }
