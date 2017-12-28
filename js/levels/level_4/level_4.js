@@ -41,9 +41,10 @@ class level_4_State
         this.player = game.add.sprite(game.world.centerX + 30, game.world.centerY, 'player');
         this.player_controller = new gameUtils(this.player);
 
-        let restart_level = this.restart_level;
+        let player_controller = this.player_controller;
         this.map.setTileIndexCallback([69], function() {
-            restart_level();
+            game.state.start('game_restart_4');
+            player_controller.kill_theme_music();
         });
 
         this.keys = game.add.group();
@@ -106,6 +107,7 @@ class level_4_State
 
     collect_key(player, key)
     {
+        this.player_controller.collect_key_sfx();
         this.collected_keys += 1;
         key.kill();
     }
@@ -113,6 +115,7 @@ class level_4_State
     restart_level()
     {
         game.state.start('game_restart_4');
+        this.player_controller.kill_theme_music();
     }
 
     goto_level_5()
@@ -120,6 +123,7 @@ class level_4_State
         if (this.collected_keys === 4)
         {
             game.state.start('level_5');
+            this.player_controller.kill_theme_music();
         }
     }
 }

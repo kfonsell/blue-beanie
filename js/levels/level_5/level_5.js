@@ -43,9 +43,10 @@ class level_5_State
         this.player_controller = new gameUtils(this.player);
 
         /* Lose if player touched lava */
-        let restart_level = this.restart_level;
+        let player_controller = this.player_controller;
         this.map.setTileIndexCallback([69], function() {
-            restart_level();
+            game.state.start('game_restart_5');
+            player_controller.kill_theme_music();
         });
 
         this.keys = game.add.group();
@@ -109,6 +110,7 @@ class level_5_State
 
     collect_key(player, key)
     {
+        this.player_controller.collect_key_sfx();
         this.collected_keys += 1;
         key.kill();
     }
@@ -116,6 +118,7 @@ class level_5_State
     restart_level()
     {
         game.state.start('game_restart_5');
+        this.player_controller.kill_theme_music();
     }
 
     win_game()
@@ -123,6 +126,7 @@ class level_5_State
         if (this.collected_keys === 6)
         {
             game.state.start('win');
+            this.player_controller.kill_theme_music();
         }
     }
 }

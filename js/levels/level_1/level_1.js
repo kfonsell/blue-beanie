@@ -98,7 +98,8 @@ class level_1_State
 
     /* Collect keys, destroy and count collected keys. */
     collect_key(player, key)
-    {
+    {   
+        this.player_controller.collect_key_sfx();
         this.collected_keys += 1;
         key.kill();
     }
@@ -106,6 +107,7 @@ class level_1_State
     restart_level()
     {
         game.state.start('game_restart_1');
+        this.player_controller.kill_theme_music();
     }
     
     /* Proceed to level 2. */
@@ -115,6 +117,7 @@ class level_1_State
         if (this.collected_keys === 3)
         {
             game.state.start('level_2');
+            this.player_controller.kill_theme_music();
         }
     }
 }

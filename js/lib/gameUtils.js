@@ -28,6 +28,10 @@ class gameUtils
         this.keyboard = game.input.keyboard;
         this.cursors = this.keyboard.createCursorKeys();
         this.player = player;
+        this.theme_music = game.add.audio('theme_music1');
+        this.theme_music.loopFull(0.6);
+
+        this.collect_sfx = game.add.audio('pick');
 
         this.player.animations.add('left', [9, 10, 11], 10, true);
         this.player.animations.add('right', [3, 4, 5], 10, true);
@@ -78,5 +82,20 @@ class gameUtils
             this.player.body.velocity.y = 0;
             this.player.animations.play('still');
         }
+    }
+
+    kill_theme_music()
+    {
+        this.theme_music.stop();
+    }
+
+    collect_key_sfx()
+    {
+        this.collect_sfx.play();
+    }
+
+    set_music_state()
+    {
+
     }
 }

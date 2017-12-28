@@ -42,13 +42,15 @@ class level_2_State
 
         /* Temporary hack for game.physics.arcade.overlap() which doesn't won't work different layers */
         /* If player overlap/collide with lava, restart level 2 */
-        let restart_level = this.restart_level;
-        this.map.setTileIndexCallback([69], function() {
-            restart_level();
-        });
 
         this.player = game.add.sprite(game.world.centerX - 100, game.world.centerY, 'player');
         this.player_controller = new gameUtils(this.player);
+
+        let player_controller = this.player_controller;
+        this.map.setTileIndexCallback([69], function() {
+            game.state.start('game_restart_2');
+            player_controller.kill_theme_music();
+        });
 
         this.keys = game.add.group();
         this.keys.enableBody = true;
@@ -93,6 +95,7 @@ class level_2_State
     /* Destroy key after player got it */
     collect_key(player, key)
     {
+        this.player_controller.collect_key_sfx();
         this.collected_keys += 1;
         key.kill();
     }
@@ -101,6 +104,7 @@ class level_2_State
     restart_level()
     {
         game.state.start('game_restart_2');
+        this.player_controller.kill_theme_music();
     }
 
     /* Proceed to level 3 */
@@ -109,6 +113,7 @@ class level_2_State
         if (this.collected_keys === 4)
         {
             game.state.start('level_3');
+            this.player_controller.kill_theme_music();
         }
     }
 }

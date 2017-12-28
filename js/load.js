@@ -44,6 +44,10 @@ class loadState
         game.load.image('key', 'assets/graphics/tiles/key.png');
         game.load.image('wm', 'assets/graphics/tiles/wm.png');
         game.load.spritesheet('bat', 'assets/graphics/tiles/bat-sprite32x32.png', 32, 32, 16);
+
+        /* Audio */
+        game.load.audio('theme_music1', 'assets/audio/theme_music1.wav');
+        game.load.audio('pick', 'assets/audio/pick.wav');
     }
 
     create()

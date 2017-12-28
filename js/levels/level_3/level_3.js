@@ -104,6 +104,7 @@ class level_3_State
 
     collect_key(player, key)
     {
+        this.player_controller.collect_key_sfx();
         this.collected_keys += 1;
         key.kill();
     }
@@ -111,6 +112,7 @@ class level_3_State
     restart_level()
     {
         game.state.start('game_restart_3');
+        this.player_controller.kill_theme_music();
     }
 
     goto_level_4()
@@ -118,6 +120,7 @@ class level_3_State
         if (this.collected_keys === 3)
         {
             game.state.start('level_4');
+            this.player_controller.kill_theme_music();
         }
     }
 }
