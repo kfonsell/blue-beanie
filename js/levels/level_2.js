@@ -11,6 +11,7 @@ class level_2_State
         this.map.addTilesetImage('lava');
         this.map.addTilesetImage('key');
         this.map.addTilesetImage('bat');
+        this.map.addTilesetImage('door');
 
         this.layer_0 = this.map.createLayer('background_layer');
         this.layer_0.resizeWorld();
@@ -36,16 +37,23 @@ class level_2_State
         this.map.createFromObjects('enemies_layer', 76, 'bat', 1, true, false, this.enemies);
         this.enemies.callAll('animations.add', 'animations', 'fly', [1, 2, 3], 10, true);
         this.enemies.callAll('animations.play', 'animations', 'fly');
+
+        this.door = game.add.group();
+        this.door.enableBody = true;
+
+        this.map.createFromObjects('exit_layer', 1001, 'door', 33, true, false, this.door);
     }
 
     update()
     {
         game.physics.arcade.collide(this.player, this.layer_0);
         game.physics.arcade.overlap(this.player, this.keys, this.collect_key, null, this);
+        game.physics.arcade.overlap(this.player, this.door, this.goto_level_3, null, this);
         game.physics.arcade.overlap(this.player, this.enemies, this.restart_level, null, this);
 
         this.player_controller.set_main_player_movements();
 
+        /* Enemies follow player */
         let player = this.player;
         this.enemies.forEachAlive(function(enemy)
         {
@@ -68,10 +76,11 @@ class level_2_State
         game.state.start('lose');
     }
 
-    goto_level_2()
+    goto_level_3()
     {
         if (this.collected_keys === 4)
         {
+            /* Temporary placeholder */
             game.state.start('level_1');
         }
     }
