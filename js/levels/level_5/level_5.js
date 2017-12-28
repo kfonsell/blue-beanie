@@ -19,32 +19,23 @@
 */
 
 
-/* Display instructions and wait for user input to start game. */
-class menuState
+/* Level 5 game logic */
+class level_5_State
 {
     create()
     {
-        let name_label = game.add.text(
-                game.height / 2,
-                game.width / 2,
-                'Blue Beanie',
-                {font: '50px Arial', fill: '#ffffff'}
-        );
+        this.map = game.add.tilemap('map_5');
+        this.map.addTilesetImage('landscape');
 
-        let start_label = game.add.text(
-                80,
-                game.world.height - 80,
-                'Press the "T" key to start',
-                {font: '25px Arial', fill: '#ffffff'}
-        );
+        this.layer_0 = this.map.createLayer('background_layer');
+        this.layer_0.resizeWorld();
 
-        let t_key = game.input.keyboard.addKey(Phaser.Keyboard.T);
-        t_key.onDown.addOnce(this.start, this);
+        this.player = game.add.sprite(game.world.centerX + 30, game.world.centerY, 'player');
+        this.player_controller = new gameUtils(this.player);
     }
 
-    start()
+    update()
     {
-        // temporary level 5
-        game.state.start('level_5');
+        this.player_controller.set_main_player_movements();
     }
 }
