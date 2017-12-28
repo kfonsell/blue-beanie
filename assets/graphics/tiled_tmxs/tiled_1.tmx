@@ -6,7 +6,7 @@
  <tileset firstgid="65" name="key" tilewidth="24" tileheight="32" tilecount="1">
   <image source="../tiles/key.png" width="24" height="32"/>
  </tileset>
- <tileset firstgid="66" name="bat-sprite32x32" tilewidth="32" tileheight="32" tilecount="16">
+ <tileset firstgid="66" name="bat" tilewidth="32" tileheight="32" tilecount="16">
   <image source="../tiles/bat-sprite32x32.png" width="128" height="128"/>
  </tileset>
  <tileset firstgid="82" name="door" tilewidth="16" tileheight="32" tilecount="1536">

@@ -133,7 +133,7 @@
         }, 
         {
          "draworder":"topdown",
-         "height":30,
+         "height":0,
          "name":"exit_layer",
          "objects":[
                 {
@@ -155,7 +155,7 @@
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":30,
+         "width":0,
          "x":0,
          "y":0
         }],
@@ -206,7 +206,7 @@
          "imageheight":128,
          "imagewidth":128,
          "margin":0,
-         "name":"bat-sprite32x32",
+         "name":"bat",
          "properties":
             {
 
