@@ -24,6 +24,7 @@ class menuState
 {
     create()
     {
+        game.add.image(0, 0, 'water_bg');
         let bar = game.add.graphics();
         bar.beginFill(0x000000, 0.2);
         bar.drawRect(0, 100, 800, 100);
@@ -41,6 +42,9 @@ class menuState
         let text3 = game.add.text(0, 150, 'Click anywhere on the game screen to start.', style);
         text3.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text3.setTextBounds(0, 100, 800, 100);
+
+        this.synth = game.add.audio('calm_synth');
+        this.synth.loopFull(0.6);
     }
 
     update()
@@ -53,6 +57,7 @@ class menuState
 
     start()
     {
+        this.synth.stop();
         game.state.start('level_1');
     }
 }

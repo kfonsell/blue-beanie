@@ -52,6 +52,8 @@ A 2D run-and-collect web video game.
 * Collected key sound effect by [Mattix145](https://www.freesound.org/people/Mattix145)
 * Game over (lose) sound effect by [noirenex](https://freesound.org/people/noirenex/)
 * Game over (win) sound effect by [LittleRobotSoundFactory](https://freesound.org/people/LittleRobotSoundFactory/)
+* Calm synthesizer music by [InspectorJ](https://freesound.org/people/InspectorJ/)
+* Game menu background by [ZuercherUtigerPhotography](https://pixabay.com/en/users/ZuercherUtigerPhotography-4002440/)
 
 ## Project Authors
 
