@@ -45,6 +45,7 @@ class level_4_State
         this.map.setTileIndexCallback([69], function() {
             game.state.start('game_restart_4');
             player_controller.kill_theme_music();
+            player_controller.play_gmover_sfx();
         });
 
         this.keys = game.add.group();
@@ -116,6 +117,7 @@ class level_4_State
     {
         game.state.start('game_restart_4');
         this.player_controller.kill_theme_music();
+        this.player_controller.play_gmover_sfx();
     }
 
     goto_level_5()

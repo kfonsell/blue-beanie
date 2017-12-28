@@ -50,6 +50,7 @@ A 2D run-and-collect web video game.
 * Spiky monster sprite by [bevouliin.com](https://opengameart.org/users/bevouliincom)
 * Theme music by [Mrthenoronha](https://mrthenoronha.bandcamp.com/track/enter-the-monster-den)
 * Collected key sound effect by [Mattix145](https://www.freesound.org/people/Mattix145)
+* Game over sound effect by [noirenex](https://freesound.org/people/noirenex/)
 
 ## Project Authors
 

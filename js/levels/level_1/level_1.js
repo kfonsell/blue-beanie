@@ -108,6 +108,7 @@ class level_1_State
     {
         game.state.start('game_restart_1');
         this.player_controller.kill_theme_music();
+        this.player_controller.play_gmover_sfx();
     }
     
     /* Proceed to level 2. */

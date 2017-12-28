@@ -47,6 +47,7 @@ class level_5_State
         this.map.setTileIndexCallback([69], function() {
             game.state.start('game_restart_5');
             player_controller.kill_theme_music();
+            player_controller.play_gmover_sfx();
         });
 
         this.keys = game.add.group();
@@ -119,6 +120,7 @@ class level_5_State
     {
         game.state.start('game_restart_5');
         this.player_controller.kill_theme_music();
+        this.player_controller.play_gmover_sfx();
     }
 
     win_game()

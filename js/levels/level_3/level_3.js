@@ -113,6 +113,7 @@ class level_3_State
     {
         game.state.start('game_restart_3');
         this.player_controller.kill_theme_music();
+        this.player_controller.play_gmover_sfx();
     }
 
     goto_level_4()

@@ -33,6 +33,8 @@ class gameUtils
 
         this.collect_sfx = game.add.audio('pick');
 
+        this.gmover_sfx = game.add.audio('gmover_sfx');
+
         this.player.animations.add('left', [9, 10, 11], 10, true);
         this.player.animations.add('right', [3, 4, 5], 10, true);
         this.player.animations.add('up', [6, 7, 8], 10, true);
@@ -94,8 +96,8 @@ class gameUtils
         this.collect_sfx.play();
     }
 
-    set_music_state()
+    play_gmover_sfx()
     {
-
+        this.gmover_sfx.play();
     }
 }

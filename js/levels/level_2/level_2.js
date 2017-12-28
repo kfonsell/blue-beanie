@@ -50,6 +50,7 @@ class level_2_State
         this.map.setTileIndexCallback([69], function() {
             game.state.start('game_restart_2');
             player_controller.kill_theme_music();
+            player_controller.play_gmover_sfx();
         });
 
         this.keys = game.add.group();
@@ -105,6 +106,7 @@ class level_2_State
     {
         game.state.start('game_restart_2');
         this.player_controller.kill_theme_music();
+        this.player_controller.play_gmover_sfx();
     }
 
     /* Proceed to level 3 */
