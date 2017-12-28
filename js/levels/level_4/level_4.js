@@ -94,7 +94,6 @@ class level_4_State
 
         });
 
-
         /* Make land monsters follow player (collision applies ) */
         this.enemies2.forEachAlive(function(enemy)
         {
