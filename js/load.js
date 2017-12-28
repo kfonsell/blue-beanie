@@ -24,12 +24,24 @@ class loadState
 {
     preload()
     {
-        let loading_label = game.add.text(
+        let bar = game.add.graphics();
+        bar.beginFill(0x000000, 0.2);
+        bar.drawRect(0, 100, 800, 100);
+
+        let style = { font: "bold 32px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
+
+        let text = game.add.text(0, 0, "Loading game..", style);
+        text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
+
+        //  We'll set the bounds to be from x0, y100 and be 800px wide by 100px high
+        text.setTextBounds(0, 100, 800, 100);
+        
+        /*let loading_label = game.add.text(
                 150,
                 150,
                 'loading game...',
                 {font: '30px Courier', fill: '#ffffff'}
-        );
+        );*/
 
         game.load.tilemap('map_1', 'assets/graphics/tilemaps/tiled_1.json', null, Phaser.Tilemap.TILED_JSON);
         game.load.tilemap('map_2', 'assets/graphics/tilemaps/tiled_2.json', null, Phaser.Tilemap.TILED_JSON);

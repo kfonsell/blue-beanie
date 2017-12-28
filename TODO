@@ -17,9 +17,9 @@ High priorities:
         [DONE] Implement movement and player-bat overlap event.
 
     * Add HUD (collected keys, timelapse (40 seconds min?), current level)
-    * Improving game menu and game over screen.
-    * Add music.
-    * Add fatal obstacles (lava, spikes, etc)
+    * [DONE] Improving game menu and game over screen.
+    * [DONE] Add music.
+    * [DONE] Add fatal obstacles (lava, spikes, etc)
 
 Low priorities:
     * Decorate outside canvas backgrounds.
@@ -35,7 +35,7 @@ Levels Objectives
 2. [DONE] Collect 4 keys, avoid the bats and lava pool and go to the door to proceed to next level.
 3. [Done] Collect 3 keys, avoid the bats and walking monsters then go to the door to proceed to next level.
 4. [DONE] Collect 4 keys, avoid the bats, walking monsters, and lava pool then go to the door to proceed to next level.
-5. Collect 6 keys, avoid those four bats and four walkings monster, in a bigger map with a lot of dangerous small lava pools.
+5. [DONE] Collect 6 keys, avoid those four bats and four walkings monster, in a bigger map with a lot of dangerous small lava pools.
     - Go to the door to win the game!
 
 

@@ -24,19 +24,23 @@ class menuState
 {
     create()
     {
-        let name_label = game.add.text(
-                game.height / 2,
-                game.width / 2,
-                'Blue Beanie',
-                {font: '50px Arial', fill: '#ffffff'}
-        );
+        let bar = game.add.graphics();
+        bar.beginFill(0x000000, 0.2);
+        bar.drawRect(0, 100, 800, 100);
 
-        let start_label = game.add.text(
-                80,
-                game.world.height - 80,
-                'Press the "T" key to start',
-                {font: '25px Arial', fill: '#ffffff'}
-        );
+        let style = { font: "bold 32px Arial", fill: "#fff", boundsAlignH: "center", boundsAlignV: "middle" };
+
+        let text = game.add.text(0, 0, "Blue Beanie", style);
+        text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
+        text.setTextBounds(0, 100, 800, 100);
+
+        let text2 = game.add.text(0, 40, "by faraco", style);
+        text2.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
+        text2.setTextBounds(0, 100, 800, 100);
+
+        let text3 = game.add.text(0, 150, 'Press the "T" key to start', style);
+        text3.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
+        text3.setTextBounds(0, 100, 800, 100);
 
         let t_key = game.input.keyboard.addKey(Phaser.Keyboard.T);
         t_key.onDown.addOnce(this.start, this);
