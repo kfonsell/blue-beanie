@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="32" tileheight="32" nextobjectid="9">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="32" tileheight="32" nextobjectid="17">
  <tileset firstgid="1" name="landscape" tilewidth="32" tileheight="32" tilecount="64">
   <image source="../tiles/landscape.png" width="256" height="256"/>
  </tileset>
@@ -8,6 +8,12 @@
  </tileset>
  <tileset firstgid="74" name="key" tilewidth="24" tileheight="32" tilecount="1">
   <image source="../tiles/key.png" width="24" height="32"/>
+ </tileset>
+ <tileset firstgid="75" name="bat" tilewidth="32" tileheight="32" tilecount="16">
+  <image source="../tiles/bat-sprite32x32.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="91" name="wm" tilewidth="32" tileheight="32" tilecount="1">
+  <image source="../tiles/wm.png" width="32" height="32"/>
  </tileset>
  <layer name="background_layer" width="60" height="60">
   <data encoding="csv">
@@ -80,5 +86,17 @@
   <object id="4" gid="74" x="1216" y="510" width="24" height="32"/>
   <object id="5" gid="74" x="616" y="1022" width="24" height="32"/>
   <object id="6" gid="74" x="167" y="865" width="24" height="32"/>
+ </objectgroup>
+ <objectgroup name="enemies_layer1">
+  <object id="9" gid="76" x="1571" y="1217" width="32" height="32"/>
+  <object id="10" gid="76" x="1441" y="799" width="32" height="32"/>
+  <object id="11" gid="76" x="580" y="671" width="32" height="32"/>
+  <object id="12" gid="76" x="447" y="1601" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="enemies_layer2">
+  <object id="13" gid="91" x="1060" y="143" width="32" height="32"/>
+  <object id="14" gid="91" x="1798" y="1605" width="32" height="32"/>
+  <object id="15" gid="91" x="643" y="1470" width="32" height="32"/>
+  <object id="16" gid="91" x="59" y="724" width="32" height="32"/>
  </objectgroup>
 </map>
