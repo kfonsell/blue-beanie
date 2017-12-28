@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="4">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="6">
  <tileset firstgid="1" name="landscape" tilewidth="32" tileheight="32" tilecount="64">
   <image source="../tiles/landscape.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="65" name="key" tilewidth="24" tileheight="32" tilecount="1">
   <image source="../tiles/key.png" width="24" height="32"/>
+ </tileset>
+ <tileset firstgid="66" name="bat" tilewidth="32" tileheight="32" tilecount="16">
+  <image source="../tiles/bat-sprite32x32.png" width="128" height="128"/>
  </tileset>
  <layer name="background_layer" width="30" height="30">
   <data encoding="csv">
@@ -44,5 +47,9 @@
   <object id="1" gid="65" x="679" y="767" width="24" height="32"/>
   <object id="2" gid="65" x="102" y="448" width="24" height="32"/>
   <object id="3" gid="65" x="197" y="127" width="24" height="32"/>
+ </objectgroup>
+ <objectgroup name="enemies_layer">
+  <object id="4" gid="67" x="676" y="194" width="32" height="32"/>
+  <object id="5" gid="67" x="28" y="863" width="32" height="32"/>
  </objectgroup>
 </map>

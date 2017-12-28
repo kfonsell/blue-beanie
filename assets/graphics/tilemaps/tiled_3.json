@@ -70,8 +70,52 @@
          "width":30,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "height":30,
+         "name":"enemies_layer",
+         "objects":[
+                {
+                 "gid":67,
+                 "height":32,
+                 "id":4,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":676,
+                 "y":194
+                }, 
+                {
+                 "gid":67,
+                 "height":32,
+                 "id":5,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":28,
+                 "y":863
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":30,
+         "x":0,
+         "y":0
         }],
- "nextobjectid":4,
+ "nextobjectid":6,
  "orientation":"orthogonal",
  "properties":
     {
@@ -111,6 +155,22 @@
          "tilecount":1,
          "tileheight":32,
          "tilewidth":24
+        }, 
+        {
+         "firstgid":66,
+         "image":"..\/tiles\/bat-sprite32x32.png",
+         "imageheight":128,
+         "imagewidth":128,
+         "margin":0,
+         "name":"bat",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tilecount":16,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "version":1,
