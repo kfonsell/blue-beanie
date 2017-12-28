@@ -38,12 +38,17 @@ class menuState
         text2.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text2.setTextBounds(0, 100, 800, 100);
 
-        let text3 = game.add.text(0, 150, 'Press the "T" key to start', style);
+        let text3 = game.add.text(0, 150, 'Click anywhere on the game screen to start.', style);
         text3.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text3.setTextBounds(0, 100, 800, 100);
+    }
 
-        let t_key = game.input.keyboard.addKey(Phaser.Keyboard.T);
-        t_key.onDown.addOnce(this.start, this);
+    update()
+    {
+        if (game.input.activePointer.isDown)
+        {
+            this.start();
+        }
     }
 
     start()

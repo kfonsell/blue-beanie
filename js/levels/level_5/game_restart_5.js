@@ -34,12 +34,17 @@ class gameRestart_5
         text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text.setTextBounds(0, 100, 800, 100);
 
-        let text2 = game.add.text(0, 50, 'Press the "T" key to restart level 5.', style);
+        let text2 = game.add.text(0, 50, 'Click anywhere on the screen to restart level 5.', style);
         text2.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text2.setTextBounds(0, 100, 800, 100);
+    }
 
-        let t_key = game.input.keyboard.addKey(Phaser.Keyboard.T);
-        t_key.onDown.addOnce(this.restart, this);
+    update()
+    {
+        if (game.input.activePointer.isDown)
+        {
+            this.restart();
+        }
     }
 
     restart()

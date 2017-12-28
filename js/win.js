@@ -34,18 +34,23 @@ class winState
         text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text.setTextBounds(0, 100, 800, 100);
 
-        let text2 = game.add.text(0, 50, 'Press the "T" key to restart go to the game menu.', style);
+        let text2 = game.add.text(0, 50, 'Click anywhere on the screen to go the game menu.', style);
         text2.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text2.setTextBounds(0, 100, 800, 100);
-
-        let t_key = game.input.keyboard.addKey(Phaser.Keyboard.T);
-        t_key.onDown.addOnce(this.restart, this);
 
         let game_win_music = game.add.audio('game_win');
         game_win_music.play();
     }
 
-    restart()
+    update()
+    {
+        if (game.input.activePointer.isDown)
+        {
+            this.start();
+        }
+    }
+
+    start()
     {
         game.state.start('menu');
     }
