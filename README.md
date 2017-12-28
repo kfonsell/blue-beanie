@@ -10,6 +10,10 @@ A 2D run-and-collect web video game.
 
 ![level_2](https://user-images.githubusercontent.com/24475030/34401081-f154f990-ebd2-11e7-8aae-d07d29d8cbb1.png)
 
+## Level 3 screenshot
+
+![level_3](https://user-images.githubusercontent.com/24475030/34411767-f5281a98-ec13-11e7-85d6-e7bea66c7d6b.png)
+
 # Play right now
 
 1. Visit https://faraco.github.io/blue-beanie/index.html to play online.
