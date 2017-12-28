@@ -40,6 +40,9 @@ class winState
 
         let t_key = game.input.keyboard.addKey(Phaser.Keyboard.T);
         t_key.onDown.addOnce(this.restart, this);
+
+        let game_win_music = game.add.audio('game_win');
+        game_win_music.play();
     }
 
     restart()

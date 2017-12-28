@@ -49,6 +49,7 @@ class loadState
         game.load.audio('theme_music1', 'assets/audio/theme_music1.wav');
         game.load.audio('pick', 'assets/audio/pick.wav');
         game.load.audio('gmover_sfx', 'assets/audio/game_over_sfx.wav');
+        game.load.audio('game_win', 'assets/audio/game_win.mp3');
     }
 
     create()
