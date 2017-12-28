@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="6">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="14">
  <tileset firstgid="1" name="landscape" tilewidth="32" tileheight="32" tilecount="64">
   <image source="../tiles/landscape.png" width="256" height="256"/>
  </tileset>
@@ -8,6 +8,12 @@
  </tileset>
  <tileset firstgid="66" name="bat" tilewidth="32" tileheight="32" tilecount="16">
   <image source="../tiles/bat-sprite32x32.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="82" name="door" tilewidth="16" tileheight="32" tilecount="1536">
+  <image source="../tiles/door.png" width="1024" height="768"/>
+ </tileset>
+ <tileset firstgid="1618" name="wm" tilewidth="32" tileheight="32" tilecount="1">
+  <image source="../tiles/wm.png" width="32" height="32"/>
  </tileset>
  <layer name="background_layer" width="30" height="30">
   <data encoding="csv">
@@ -31,9 +37,9 @@
 22,26,26,26,26,22,22,37,22,22,22,26,26,26,26,26,26,26,26,26,52,52,26,26,18,18,26,26,26,22,
 22,38,26,26,26,22,37,37,37,37,22,37,37,37,26,26,26,26,26,26,52,52,22,22,22,22,22,26,26,22,
 22,38,38,38,26,22,37,22,37,22,22,26,26,26,26,26,26,26,26,26,52,52,22,26,26,26,22,26,26,22,
-22,26,26,26,38,38,22,22,22,22,22,26,26,26,26,26,26,26,26,26,52,26,22,22,22,22,22,26,26,22,
-22,26,26,26,26,26,26,26,26,37,26,26,26,26,26,26,26,26,26,26,52,26,26,26,26,26,26,26,26,22,
-22,26,26,26,26,26,26,26,37,37,26,26,26,26,26,26,26,26,52,52,52,52,52,26,26,26,26,26,26,22,
+22,26,26,26,38,38,22,22,22,22,22,26,26,26,34,34,34,34,26,26,52,26,22,22,22,22,22,26,26,22,
+22,26,26,26,26,26,26,26,26,37,26,26,26,26,34,34,34,34,26,26,52,26,26,26,26,26,26,26,26,22,
+22,26,26,26,26,26,26,26,37,37,26,26,26,26,34,34,34,34,52,52,52,52,52,26,26,26,26,26,26,22,
 22,26,26,26,26,26,26,26,37,26,26,26,26,26,26,26,26,52,52,26,52,26,52,52,26,26,26,26,26,22,
 22,26,26,26,26,26,37,37,37,26,26,22,22,22,22,26,26,26,26,26,26,26,26,26,26,26,26,26,26,22,
 22,26,26,26,37,37,37,26,26,26,26,22,26,26,22,26,26,26,26,26,26,26,26,26,26,26,26,26,26,22,
@@ -51,5 +57,12 @@
  <objectgroup name="enemies_layer">
   <object id="4" gid="67" x="676" y="194" width="32" height="32"/>
   <object id="5" gid="67" x="28" y="863" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="exit_layer">
+  <object id="6" gid="159" x="487" y="640" width="47" height="64"/>
+ </objectgroup>
+ <objectgroup name="enemies_layer2">
+  <object id="12" gid="1618" x="898" y="639" width="32" height="32"/>
+  <object id="13" gid="1618" x="191" y="258" width="32" height="32"/>
  </objectgroup>
 </map>

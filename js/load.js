@@ -34,12 +34,14 @@ class loadState
         game.load.tilemap('map_1', 'assets/graphics/tilemaps/tiled_1.json', null, Phaser.Tilemap.TILED_JSON);
         game.load.tilemap('map_2', 'assets/graphics/tilemaps/tiled_2.json', null, Phaser.Tilemap.TILED_JSON);
         game.load.tilemap('map_3', 'assets/graphics/tilemaps/tiled_3.json', null, Phaser.Tilemap.TILED_JSON);
+        game.load.tilemap('map_4', 'assets/graphics/tilemaps/tiled_4.json', null, Phaser.Tilemap.TILED_JSON);
         
         game.load.spritesheet('player', 'assets/graphics/sprites/MainGuySpriteSheet.png', 41, 36, 12);
         game.load.image('landscape', 'assets/graphics/tiles/landscape.png');
         game.load.image('lava', 'assets/graphics/tiles/lava.png');
         game.load.image('door', 'assets/graphics/tiles/door.png');
         game.load.image('key', 'assets/graphics/tiles/key.png');
+        game.load.image('wm', 'assets/graphics/tiles/wm.png');
         game.load.spritesheet('bat', 'assets/graphics/tiles/bat-sprite32x32.png', 32, 32, 16);
     }
 

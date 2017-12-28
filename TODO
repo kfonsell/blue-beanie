@@ -1,12 +1,9 @@
-Goal: Reveal the mystery and find all blue beanies!
+Goal: Run and collect all keys!
 
-Has 7 levels.
+Has 5 levels.
 
-Beanie stored in a chest.
 
-2 to 3 enemies per map/level.
-
-After collected one beanie for the level, he/she can go to next level through a door (load new level game state).
+After collected the keys for the level, he/she can go to next level through a door (load new level game state).
 
 
 Levels Priorities
@@ -29,10 +26,16 @@ Low priorities:
     * Add project links.
     * Animate objects.
 
+Experimental:
+    * Add scoreboard and save player name and score inside an online database server (sinatra + ruby + mysql).
+
 Levels Objectives
 ------------------
-1. [DONE] Collect 3 keys, avoid the bats and open the door to proceed to next level.
-2. [DONE] Collect 4 keys, avoid the bats and lava pool and open the door to proceed to next level.
-3. Collect 3 keys, avoid the two bats and walking monsters then open the door to proceed to next level.
+1. [DONE] Collect 3 keys, avoid the bats and go to the door to proceed to next level.
+2. [DONE] Collect 4 keys, avoid the bats and lava pool and go to the door to proceed to next level.
+3. [Done] Collect 3 keys, avoid the bats and walking monsters then go to the door to proceed to next level.
+4. Collect 4 keys, avoid the bats, walking monsters, and lava pool then go to the door to proceed to next level.
+5. Collect 5 keys, avoid those four bats and four walkings monster, in a bigger map with a lot of dangerous small lava pools.
+    - Go to the door to win the game!
 
 
