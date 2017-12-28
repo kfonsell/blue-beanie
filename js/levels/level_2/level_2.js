@@ -81,7 +81,7 @@ class level_2_State
     /* Restart level 2 */
     restart_level()
     {
-        game.state.start('lose');
+        game.state.start('game_restart_2');
     }
 
     /* Proceed to level 3 */
@@ -89,8 +89,7 @@ class level_2_State
     {
         if (this.collected_keys === 4)
         {
-            /* Temporary placeholder */
-            game.state.start('level_1');
+            game.state.start('level_3');
         }
     }
 }

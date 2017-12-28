@@ -84,10 +84,9 @@ class level_1_State
         key.kill();
     }
 
-    /* TODO Restart level 1 instead */
     restart_level()
     {
-        game.state.start('lose');
+        game.state.start('game_restart_1');
     }
     
     /* Proceed to level 2. */

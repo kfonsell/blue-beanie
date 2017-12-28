@@ -1,7 +1,7 @@
 "use strict";
 
 /* Game over (lose) screen menu */
-class loseState
+class gameRestart_1
 {
     create()
     {
@@ -15,7 +15,7 @@ class loseState
         let start_label = game.add.text(
             80,
             game.world.height - 80,
-            'Press the "T" key to restart',
+            'Press the "T" key to restart level 1',
             {font: '25px Arial', fill: '#ffffff'}
         );
 
@@ -25,6 +25,6 @@ class loseState
 
     restart()
     {
-        game.state.start('menu');
+        game.state.start('level_1');
     }
 }

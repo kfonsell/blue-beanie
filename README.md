@@ -16,7 +16,9 @@ A 2D run-and-collect web video game.
 
 ## Levels Objectives
 1. Collect 3 keys, avoid the bats and open the door to proceed to next level.
-2. Collect 4 keys, avoid the bats and lava pool and open the door to proceed to next level [Under development]
+2. Collect 4 keys, avoid the bats and lava pool and open the door to proceed to next level.
+3. Collect 3 keys, avoid the two bats and walking monsters then open the door to proceed to next level [Under Development]
+
 
 # Assets Authors
 

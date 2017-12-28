@@ -14,6 +14,7 @@ class loadState
 
         game.load.tilemap('map_1', 'assets/graphics/tilemaps/tiled_1.json', null, Phaser.Tilemap.TILED_JSON);
         game.load.tilemap('map_2', 'assets/graphics/tilemaps/tiled_2.json', null, Phaser.Tilemap.TILED_JSON);
+        game.load.tilemap('map_3', 'assets/graphics/tilemaps/tiled_3.json', null, Phaser.Tilemap.TILED_JSON);
         
         game.load.spritesheet('player', 'assets/graphics/sprites/MainGuySpriteSheet.png', 41, 36, 12);
         game.load.image('landscape', 'assets/graphics/tiles/landscape.png');
