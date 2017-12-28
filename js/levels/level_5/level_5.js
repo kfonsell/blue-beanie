@@ -42,6 +42,12 @@ class level_5_State
         this.player = game.add.sprite(game.world.centerX + 30, game.world.centerY, 'player');
         this.player_controller = new gameUtils(this.player);
 
+        /* Lose if player touched lava */
+        let restart_level = this.restart_level;
+        this.map.setTileIndexCallback([69], function() {
+            restart_level();
+        });
+
         this.keys = game.add.group();
         this.keys.enableBody = true;
 
@@ -59,12 +65,24 @@ class level_5_State
         this.enemies2.enableBody = true;
 
         this.map.createFromObjects('enemies_layer2', 91, 'wm', 0, true, false, this.enemies2);
+
+        this.door = game.add.group();
+        this.door.enableBody = true;
+
+        /* FIXME Fix corrupted door texture. */
+        this.map.createFromObjects('exit_layer', 164, 'door', 0, true, false, this.door);
     }
 
     update()
     {
-        /* Block player from going outside the map */
+        /* Block player & enemies from going outside the walls */
         game.physics.arcade.collide(this.player, this.layer_0);
+        game.physics.arcade.collide(this.enemies2, this.layer_0);
+
+        game.physics.arcade.overlap(this.player, this.enemies1, this.restart_level, null, this);
+        game.physics.arcade.overlap(this.player, this.enemies2, this.restart_level, null, this);
+        game.physics.arcade.overlap(this.player, this.keys, this.collect_key, null, this);
+        game.physics.arcade.overlap(this.player, this.door, this.win_game, null, this);
 
         this.player_controller.set_main_player_movements();
 
@@ -78,5 +96,33 @@ class level_5_State
             }
 
         });
+
+        /* Make land monsters follow player (collision applies ) */
+        this.enemies2.forEachAlive(function(enemy)
+        {
+            if (enemy.visible && enemy.inCamera)
+            {
+                game.physics.arcade.moveToObject(enemy, player, enemy.speed);
+            }
+        });
+    }
+
+    collect_key(player, key)
+    {
+        this.collected_keys += 1;
+        key.kill();
+    }
+
+    restart_level()
+    {
+        game.state.start('game_restart_5');
+    }
+
+    win_game()
+    {
+        if (this.collected_keys === 6)
+        {
+            game.state.start('win');
+        }
     }
 }
