@@ -46,7 +46,7 @@ class loadState
         game.load.spritesheet('bat', 'assets/graphics/tiles/bat-sprite32x32.png', 32, 32, 16);
 
         /* Audio */
-        game.load.audio('theme_music1', 'assets/audio/theme_music1.wav');
+        game.load.audio('theme_music1', 'assets/audio/theme_music1.mp3');
         game.load.audio('pick', 'assets/audio/pick.wav');
         game.load.audio('gmover_sfx', 'assets/audio/game_over_sfx.wav');
         game.load.audio('game_win', 'assets/audio/game_win.mp3');
