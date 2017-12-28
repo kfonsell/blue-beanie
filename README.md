@@ -26,8 +26,8 @@ A 2D run-and-collect web video game.
 1. Collect 3 keys, avoid the bats and open the door to proceed to next level.
 2. Collect 4 keys, avoid the bats and lava pool and open the door to proceed to next level.
 3. Collect 3 keys, avoid the two bats and walking monsters then open the door to proceed to next level.
-4. Collect 4 keys, avoid the bats, walking monsters, and lava pool then go to the door to proceed to next level. [Under Development]
-5. Collect 5 keys, avoid those four bats and four walkings monster, in a bigger map with a lot of dangerous small lava pools. 
+4. Collect 4 keys, avoid the bats, walking monsters, and lava pool then go to the door to proceed to next level. 
+5. Collect 5 keys, avoid those four bats and four walkings monster, in a bigger map with a lot of dangerous small lava pools. [Under Development]
     - Go to the door to win the game!
 
 
