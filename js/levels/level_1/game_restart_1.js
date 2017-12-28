@@ -34,7 +34,7 @@ class gameRestart_1
         text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text.setTextBounds(0, 100, 800, 100);
 
-        let text2 = game.add.text(0, 50, 'Press the "T" key to start', style);
+        let text2 = game.add.text(0, 50, 'Press the "T" key to restart level 1.', style);
         text2.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
         text2.setTextBounds(0, 100, 800, 100);
 
