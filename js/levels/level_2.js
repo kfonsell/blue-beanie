@@ -18,10 +18,10 @@ class level_2_State
         /* Outer wall */
         this.map.setCollision(22);
 
-        /* Decorator block */
+        /* Decorator around lava tile */
         this.map.setCollision(33);
 
-        this.player = game.add.sprite(game.world.centerX + 30, game.world.centerY, 'player');
+        this.player = game.add.sprite(game.world.centerX - 100, game.world.centerY, 'player');
         this.player_controller = new gameUtils(this.player);
 
         this.keys = game.add.group();
