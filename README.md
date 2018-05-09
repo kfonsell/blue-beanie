@@ -55,6 +55,10 @@ A 2D run-and-collect web video game.
 * Calm synthesizer music by [InspectorJ](https://freesound.org/people/InspectorJ/)
 * Game menu background by [ZuercherUtigerPhotography](https://pixabay.com/en/users/ZuercherUtigerPhotography-4002440/)
 
+## Known Bugs
+
+* Walking/running diagonally doesn't work. [workaround] Only execute every each direction one by one (including the mobile version gamepad).
+
 ## Project Authors
 
 * [faraco](https://github.com/faraco) <skelic3@gmail.com>
