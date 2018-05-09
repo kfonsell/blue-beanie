@@ -82,6 +82,7 @@ class level_1_State
         game.physics.arcade.overlap(this.player, this.enemies, this.restart_level, null, this);
 
         this.player_controller.set_main_player_movements();
+        this.player_controller.set_gamepad();
 
 
         /* Make enemies follow players */

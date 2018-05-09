@@ -100,4 +100,13 @@ class gameUtils
     {
         this.gmover_sfx.play();
     }
+
+    set_gamepad()
+    {
+        this.gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
+        this.joystick = this.gamepad.addJoystick(100, 420, 1.2, 'gamepad');
+
+        // No usage. For some reason I have to add this or the game will return error. So, the workaround here is too 'hide' by putting button location out of viewport.
+        this.button = this.gamepad.addButton(900, 420, 1.0, 'gamepad');
+    }
 }

@@ -50,6 +50,7 @@ class loadState
         game.load.tilemap('map_5', 'assets/graphics/tilemaps/tiled_5.json', null, Phaser.Tilemap.TILED_JSON);
         
         game.load.spritesheet('player', 'assets/graphics/sprites/MainGuySpriteSheet.png', 41, 36, 12);
+        game.load.spritesheet('gamepad', 'assets/graphics/sprites/gamepad_spritesheet.png', 100, 100);
         game.load.image('landscape', 'assets/graphics/tiles/landscape.png');
         game.load.image('lava', 'assets/graphics/tiles/lava.png');
         game.load.image('door', 'assets/graphics/tiles/door.png');
