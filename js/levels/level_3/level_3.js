@@ -79,7 +79,13 @@ class level_3_State
         /* Proceed to next level if objectives successfully completed */
         game.physics.arcade.overlap(this.player, this.door, this.goto_level_4, null, this);
 
-        this.player_controller.set_main_player_movements();
+        if (game.device.desktop) {
+            this.player_controller.set_main_player_movements();
+        }
+        
+        else {
+            this.player_controller.set_gamepad();
+        }
 
         /* Make bats follow player */
         let player = this.player;

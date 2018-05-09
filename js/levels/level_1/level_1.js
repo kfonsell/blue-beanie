@@ -80,9 +80,14 @@ class level_1_State
 
         /* Restart level if player caught by enemies */
         game.physics.arcade.overlap(this.player, this.enemies, this.restart_level, null, this);
-
-        this.player_controller.set_main_player_movements();
-        this.player_controller.set_gamepad();
+        
+        if (game.device.desktop) {
+            this.player_controller.set_main_player_movements();
+        }
+        
+        else {
+            this.player_controller.set_gamepad();
+        }
 
 
         /* Make enemies follow players */

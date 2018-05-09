@@ -83,7 +83,13 @@ class level_4_State
         game.physics.arcade.overlap(this.player, this.keys, this.collect_key, null, this);
         game.physics.arcade.overlap(this.player, this.door, this.goto_level_5, null, this);
 
-        this.player_controller.set_main_player_movements();
+        if (game.device.desktop) {
+            this.player_controller.set_main_player_movements();
+        }
+        
+        else {
+            this.player_controller.set_gamepad();
+        }
 
         /* Make bats follow player */
         let player = this.player;

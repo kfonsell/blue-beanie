@@ -20,6 +20,7 @@ High priorities:
     * [DONE] Improving game menu and game over screen.
     * [DONE] Add music.
     * [DONE] Add fatal obstacles (lava, spikes, etc)
+    * [DONE] Add gamepad (joystick)
 
 Low priorities:
     * Decorate outside canvas backgrounds.

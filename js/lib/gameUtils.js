@@ -42,6 +42,15 @@ class gameUtils
         this.player.animations.add('still', [1], null, true);
 
         game.physics.arcade.enable(this.player);
+        
+        if (!game.device.desktop)
+        {
+            this.gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
+            this.joystick = this.gamepad.addJoystick(200, 420, 1.2, 'gamepad');
+            this.button = this.gamepad.addButton(900, 420, 1.0, 'gamepad');
+        }
+
+        // No usage. For some reason I have to add this or the game will return error. So, the workaround here is too 'hide' by putting button location out of viewport.
 
         game.camera.follow(this.player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
     }
@@ -57,6 +66,7 @@ class gameUtils
         {
             this.player.animations.play('left');
             this.player.body.velocity.x = -175;
+            console.log('left');
         }
 
         else if (this.cursors.right.isDown || this.keyboard.isDown(Phaser.Keyboard.D))
@@ -102,11 +112,48 @@ class gameUtils
     }
 
     set_gamepad()
-    {
-        this.gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
-        this.joystick = this.gamepad.addJoystick(100, 420, 1.2, 'gamepad');
+    {   
+        if (this.joystick.properties.inUse)
+        {
 
-        // No usage. For some reason I have to add this or the game will return error. So, the workaround here is too 'hide' by putting button location out of viewport.
-        this.button = this.gamepad.addButton(900, 420, 1.0, 'gamepad');
+            if (this.joystick.properties.left)
+            {
+                this.player.animations.play('left');
+                this.player.body.velocity.x = -175;
+            }
+
+            else if (this.joystick.properties.right)
+            {
+                this.player.animations.play('right');
+                this.player.body.velocity.x = 175;
+            }
+            
+            else if (this.joystick.properties.up)
+            {
+                this.player.animations.play('up');
+                this.player.body.velocity.y = -175;
+            }
+            
+            else if (this.joystick.properties.down)
+            {
+                this.player.animations.play('down');
+                this.player.body.velocity.y = 175;
+            }
+            
+            else
+            {
+                this.player.animations.play('still');
+                this.player.body.velocity.y = 0;
+                this.player.body.velocity.x = 0;
+            }
+            
+        }
+        
+        else
+        {
+            this.player.animations.play('still');
+            this.player.body.velocity.y = 0;
+            this.player.body.velocity.x = 0;
+        }
     }
 }

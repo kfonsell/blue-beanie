@@ -79,7 +79,13 @@ class level_2_State
         game.physics.arcade.overlap(this.player, this.door, this.goto_level_3, null, this);
         game.physics.arcade.overlap(this.player, this.enemies, this.restart_level, null, this);
 
-        this.player_controller.set_main_player_movements();
+        if (game.device.desktop) {
+            this.player_controller.set_main_player_movements();
+        }
+        
+        else {
+            this.player_controller.set_gamepad();
+        }
 
         /* Enemies follow player */
         let player = this.player;
